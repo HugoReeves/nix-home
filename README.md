@@ -3,6 +3,8 @@
 This repository contains user configuration deployed using the helpful tool [Home Manager](https://github.com/rycee/home-manager).
 In order to setup a new home sapce, simply add a home.nix file similar to this one.
 
+A full explanation of my portable user configuration management (dotfiles) system can be found on my [blog](https://blog.hugoreeves.com/posts/2019/08/your-home-in-nix-dotfile-management/).
+
 ```nix
 { config, pkgs, ... }:
 
