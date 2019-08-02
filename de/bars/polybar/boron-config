@@ -1,0 +1,249 @@
+; vim:ft=dosini
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;==========================================================
+
+
+[colors]
+background = #882f343f
+background-alt = #ee2f343f
+foreground = #f3f4f5
+foreground-alt = #f3f4f5
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+col = #00f
+
+;[global/wm]
+;margin-top = 0
+;margin-bottom = 0
+
+[bar/top]
+;monitor = ${env:MONITOR:HDMI-1}
+;monitor = ${env:MONITOR}
+margin-top = 0
+margin-bottom = 0
+width = 100%
+height = 30
+;radius = 6.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = Roboto:pixelsize=9;1
+font-1 = "FuraCode Nerd Font:style=Solid:pixelsize=9;1"
+;font-2 = "Font Awesome:style=Regular:pixelsize=9;1"
+;font-3 = "Font Awesome:pixelsize=9;1"
+
+wm-restack = bspwm
+modules-left = bspwm mpd
+modules-center = memory cpu temperature
+modules-right = volume date
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = ""
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.secondary}
+
+label-layout = %layout%
+label-layout-underline = ${colors.secondary}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/home]
+type = internal/fs
+interval = 25
+
+mount-0 = /home
+
+label-mounted = %{F#0a81f5}~%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state> <label-mode>
+margin-bottom = 0
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %name%
+label-focused-background = ${colors.background}
+;label-focused-background = ${module/bspwm.label-focused-background}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name%
+label-unfocused-padding = 4
+
+; visible = Active workspace on unfocused monitor
+; label-visible = %index%
+; label-visible-background = ${self.label-focused-background}
+; label-visible-underline = ${self.label-focused-underline}
+; label-visible-padding = ${self.label-focused-padding}
+
+label-separator-padding = 0
+; urgent = Workspace with urgency hint set
+; label-urgent = %index%
+; label-urgent-background = ${module/bspwm.label-urgent-background}
+; label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "CPU: "
+format-prefix-foreground = ${colors.foreground}
+format-underline = ${colors.secondary}
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "MEM:  "
+format-prefix-foreground = ${colors.foreground}
+format-underline = ${colors.secondary}
+label = %percentage_used%%
+
+[module/eth]
+type = internal/network
+interface = enp0s25
+interval = 3.0
+
+format-connected-underline = #95ffa4
+;format-connected-underline = #62d196
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+;format-disconnected =
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+label-disconnected = no eth
+label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/wlan]
+type = internal/network
+interface = wlp6s0
+interval = 3.0
+
+format-connected = <label-connected>
+label-connected =  %essid%
+
+format-disconnected = <label-disconnected>
+label-disconnected = " disconnected"
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+
+format-online = "<label-song> @ <label-time>"
+format-offline = "offline"
+
+label-song = %artist% - %title%
+label-song-maxlen = 50 
+label-song-ellipsis = true
+
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = "%m-%d"
+date-alt = "%Y-%m-%d" 
+time = %I:%M %p
+time-alt = %I:%M:%S %p
+
+label =  %date%   %time%
+
+
+[module/volume]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume> 
+label-volume = %percentage%%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+label-muted =  muted
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 90
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+
+format = <ramp>  <label>
+format-underline = ${colors.secondary}
+format-warn = <ramp>  <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.alert}
+
+ramp-0 =TEMP:
+ramp-1 =TEMP:
+ramp-2 =TEMP:
+ramp-foreground = ${colors.foreground}
+
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
