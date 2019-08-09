@@ -14,6 +14,7 @@
     tokei
     xsv
     fd
+    ripgrep
 
     # Common CLI tools
     gnupg
