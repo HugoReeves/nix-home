@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# DMenu + flatpak script to run a given installed flatpak app.
+flatpak run $(flatpak list --columns=application | sed '' | dmenu)

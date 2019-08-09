@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+# Run a restic backup command using the correct repo and environment values
+set -e -o pipefail
+
+# Args to be passed to the resic invocation
+args=()
+
+# The repo is the first argument
+case $1 in
+  gcs)
+    source $HOME/.config/restic/envs/gcs/env.sh
+    echo "Running command using GCS, repository: $RESTIC_REPOSITORY"
+
+    # Add Args
+    args+=( "--option" "gs.connections=$GS_CONNECTIONS" )
+    ;;
+
+  public-drive | pd)
+    source $HOME/.config/restic/envs/backup-drive/env.sh
+    echo "Running command using backup drive filesystem, repository: $RESTIC_REPOSITORY"
+    ;;
+
+  *)
+    echo "The first argument is the repository to use for the backup, the options are..."
+    echo "gcs: Google cloud storage repository."
+    echo "pd | public-drive: Public hard drive mounted at /Volumes/public"
+    exit
+    ;;
+esac
+
+# The command to execute comes second
+case $2 in
+  backup-limited-home | blh)
+    echo "Backing up limited home."
+    echo "Directories: ~/.config/ ~/.password-store/ ~/wallpapers/ ~/notes/"
+
+    # Add Args
+    args+=( 'backup' )
+    args+=( '--tag' 'limited-home' )
+    args+=( "$HOME/.config/" "$HOME/.password-store/" "$HOME/wallpapers/" "$HOME/notes/" )
+    ;;
+
+  backup-home | bh)
+    echo "Backing up important user data home directories."
+    echo "Directories: ~/.config/ ~/.password-store/ ~/wallpapers/ ~/notes/ ~/scripts/ ~/dotfiles/ ~/drive ~/devel ~/Music"
+
+    # Add Args
+    args+=( 'backup' )
+    args+=( '--tag' 'home' )
+    args+=( '--exclude-file' "$HOME/.config/restic/excludes/home" )
+    args+=( "$HOME/.config/" "$HOME/.password-store/" "$HOME/wallpapers/" "$HOME/notes/" "$HOME/scripts/" "$HOME/dotfiles/" "$HOME/drive" "$HOME/devel" "$HOME/Music" )
+    ;;
+
+  backup-full-home | bfh)
+    echo "Backing up full home directory"
+    echo "Excluding files using: $HOME/.config/restic/excludes/full-home"
+
+    args+=( 'backup' )
+    args+=( '--tag' 'full-home' )
+    args+=( "$HOME" )
+    args+=( "--exclude-file" "$HOME/.config/restic/excludes/full-home")
+    ;;
+
+  forget | f)
+    echo "Forgetting old snapshots"
+
+    args+=(
+      "forget"
+      "--host" "apollo.devices.hugoreeves.com"
+      "--group-by" "paths"
+      "--keep-last" "$KEEP_LAST"
+      "--keep-hourly" "$RETENTION_HOURS"
+      "--keep-daily" "$RETENTION_DAYS"
+      "--keep-weekly" "$RETENTION_WEEKS"
+      "--keep-monthly" "$RETENTION_MONTHS"
+      "--keep-yearly" "$RETENTION_YEARS"
+    )
+    ;;
+
+  forget-prune | fp)
+    echo "Forgetting and pruning old snapshots"
+
+    args+=(
+      "forget"
+      "--prune"
+      "--host" "apollo.devices.hugoreeves.com"
+      "--group-by" "paths"
+      "--keep-last" "$KEEP_LAST"
+      "--keep-hourly" "$RETENTION_HOURS"
+      "--keep-daily" "$RETENTION_DAYS"
+      "--keep-weekly" "$RETENTION_WEEKS"
+      "--keep-monthly" "$RETENTION_MONTHS"
+      "--keep-yearly" "$RETENTION_YEARS"
+    )
+    ;;
+
+  *)
+    echo "The second argument is the operation to run, the options are..."
+    echo "blh | backup-limited-home: Backup a small selection of home folders, mainly configuration files."
+    echo "bfh | backup-full-home: Backup the entire home directory, exclude some large directories like ~/Library/"
+    echo "bh | backup-home: Backup home files containing important user documents, this includes folders like ~/Desktop, ~/Documents and ~/drive"
+    echo "f | forget: Forgets snapshots according to the retention policies"
+    echo "fp | forget-prune: Like forget but also prunes unused data from the repository"
+    exit
+    ;;
+esac
+
+restic "${args[@]}"

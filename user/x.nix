@@ -4,6 +4,7 @@
   imports = [
     ../program/editor/neovim/default.nix
     ../program/terminal/tmux/default.nix
+    ../script/index.nix
   ];
 
   home.packages = with pkgs; [
@@ -14,6 +15,11 @@
     xsv
     fd
 
+    # Common CLI tools
+    gnupg
+    #gopass
+    weechat
+
     # Development
     neovim
     tmux
@@ -21,13 +27,17 @@
     git-crypt
     dnsutils
     whois
+    ## Python Dev
+    python37Packages.pylint
 
 
     # Files
     zstd
     restic
-    brig
-    ipfs
+    ranger
+    #croc
+    #brig
+    #ipfs
 
     # Media
     youtube-dl
@@ -45,6 +55,7 @@
     lolcat
   ];
 
+  # Git
   programs.git = {
     enable = true;
     userEmail = "hugolreeves@gmail.com";
@@ -52,5 +63,11 @@
     signing.key = "738A0BE6D8D8AE7D";
     signing.signByDefault = true;
   };
-  
+
+  # Environment
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    BROWSER = "firefox";
+    TERMINAL = "alacritty";
+  };
 }

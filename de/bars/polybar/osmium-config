@@ -60,7 +60,7 @@ font-1 = "FuraCode Nerd Font:style=Solid:pixelsize=9;1"
 
 wm-restack = bspwm
 modules-left = bspwm mpd
-modules-center = memory cpu temperature
+modules-center = memory cpu temperature battery
 modules-right = wlan volume date
 
 scroll-up = i3wm-wsnext

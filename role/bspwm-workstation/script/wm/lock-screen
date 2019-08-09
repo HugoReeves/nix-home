@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+notify-send "Locking screen..." &&
+
+dm-tool lock

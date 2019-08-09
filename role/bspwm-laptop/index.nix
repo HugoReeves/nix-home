@@ -5,11 +5,8 @@ in
   imports = [
     ../../program/editor/neovim/default.nix
     ../../program/terminal/tmux/default.nix
-    ../../program/file-manager/ranger/index.nix
     # Files to source for fish config
     ../../program/shell/fish/sources.nix
-    # Scripts
-    ./script/index.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -23,7 +20,7 @@ in
   services = {
     polybar = {
       enable = true;
-      config = ../../de/bars/polybar/boron-config;
+      config = ../../de/bars/polybar/osmium-config;
       script = "polybar top &";
     };
 
@@ -47,7 +44,8 @@ in
   programs.alacritty = {
     enable = true;
     settings = lib.attrsets.recursiveUpdate (import ../../program/terminal/alacritty/default-settings.nix) {
-      font.size = 11;
+      background_opacity = 0.85;
+      font.size = 9;
       font.user_thin_strokes = false;
       window = {
         decorations = "full"; 
