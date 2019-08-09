@@ -28,6 +28,7 @@
     git-crypt
     dnsutils
     whois
+    nodejs
     ## Python Dev
     python37Packages.pylint
 
