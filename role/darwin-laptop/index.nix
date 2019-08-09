@@ -1,6 +1,11 @@
 { config, lib, pkgs, ... }:
 {
-  nixpkgs.config.allowUnfree = true;
+  imports = [
+    # Files to source for fish config
+    ../../program/shell/fish/sources.nix
+    # Darwin only
+    ./script/index.nix
+  ];
 
   programs.alacritty = {
     enable = true;
@@ -9,5 +14,22 @@
     };
   };
 
+  # Fish Shell
+  programs.fish = lib.attrsets.recursiveUpdate(import ../../program/shell/fish/default.nix) {
+    shellInit = ''
+      bass source $HOME/.nix-profile/etc/profile.d/nix.sh
+      direnv hook fish | source
+      set PATH (fd --absolute-path . $HOME/.config/scripts | tr '\n' ':' | sed 's/.$//') $PATH
+    '';
+  };
+
+  # Environment
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    BROWSER = "firefox";
+    TERMINAL = "alacritty";
+  };
+
   home.file.".hammerspoon".source = ../../de/darwin-only/hammerspoon;
+  home.file.".karabiner/karabiner.json".source = ../../de/darwin-only/karabiner/karabiner.json;
 }

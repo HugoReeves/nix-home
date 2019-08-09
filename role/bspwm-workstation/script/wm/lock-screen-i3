@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+tmpbg='/tmp/lockscreen.png'
+wall="$HOME/.background-image"
+
+# Use wall
+notify-send "Locking screen..." &&
+convert "$wall" -scale x1080 -blur 0x4 -gravity center "$tmpbg"
+
+i3lock-color -e -f -c 000000 -i "$tmpbg"

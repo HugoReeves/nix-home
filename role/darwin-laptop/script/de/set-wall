@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cp $(realpath $1) ~/.background-image
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "'$(realpath $1)'"'

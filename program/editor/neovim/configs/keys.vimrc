@@ -18,10 +18,13 @@ nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gb :Gblame<CR>
 
 " FZF mappings
-nnoremap <leader>ff :FZF<CR>
-
-" Filetree mappings
-map <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>f :GFiles<CR>
+nnoremap <leader>F :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>h :History<CR>
+nnoremap <leader>G :Rg<CR>
+"nnoremap <leader>t :BTags<CR>
+"nnoremap <leader>T :Tags<CR>
 
 map <leader>nh :noh<CR>
 
