@@ -23,7 +23,7 @@
   promptInit = builtins.readFile ./prompt.fish;
 
   shellInit = ''
-      set PATH (cd $HOME/.config/scripts/ | fd --absolute-path | tr '\n' ':' | sed 's/.$//') $PATH
+      set PATH (fd --absolute-path . $HOME/.config/scripts | tr '\n' ':' | sed 's/.$//') $PATH
       source ~/.ssh/environment > /dev/null
   '';
 
