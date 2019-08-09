@@ -18,7 +18,7 @@ set -l color0D '#407ee7'
 set -l color0E '#6666ea'
 set -l color0F '#c33ff3'
 
-set -U FZF_DEFAULT_OPTS "
+set -Ux FZF_DEFAULT_OPTS "
   --ansi
   --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D
   --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C

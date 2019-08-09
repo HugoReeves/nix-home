@@ -20,10 +20,16 @@ case $1 in
     echo "Running command using backup drive filesystem, repository: $RESTIC_REPOSITORY"
     ;;
 
+  airport | ap)
+    source $HOME/.config/restic/envs/airport/env.sh
+    echo "Running command using airport primary/hugo, repository: $RESTIC_REPOSITORY"
+    ;;
+
   *)
     echo "The first argument is the repository to use for the backup, the options are..."
     echo "gcs: Google cloud storage repository."
-    echo "pd | public-drive: Public hard drive mounted at /Volumes/public"
+    echo "pd | public-drive: Public hard drive mounted at a common mountpoint, see ~/.config/restic/envs/backup-drive/env.sh"
+    echo "ap | airport: Apple airport timecapsule"
     exit
     ;;
 esac
@@ -32,23 +38,21 @@ esac
 case $2 in
   backup-limited-home | blh)
     echo "Backing up limited home."
-    echo "Directories: ~/.config/ ~/.password-store/ ~/wallpapers/ ~/notes/"
 
     # Add Args
     args+=( 'backup' )
     args+=( '--tag' 'limited-home' )
-    args+=( "$HOME/.config/" "$HOME/.password-store/" "$HOME/wallpapers/" "$HOME/notes/" )
+    args+=( "--files-from" "$HOME/.config/restic/includes/limited-home" )
     ;;
 
   backup-home | bh)
     echo "Backing up important user data home directories."
-    echo "Directories: ~/.config/ ~/.password-store/ ~/wallpapers/ ~/notes/ ~/scripts/ ~/dotfiles/ ~/drive ~/devel ~/Music"
 
     # Add Args
     args+=( 'backup' )
     args+=( '--tag' 'home' )
     args+=( '--exclude-file' "$HOME/.config/restic/excludes/home" )
-    args+=( "$HOME/.config/" "$HOME/.password-store/" "$HOME/wallpapers/" "$HOME/notes/" "$HOME/scripts/" "$HOME/dotfiles/" "$HOME/drive" "$HOME/devel" "$HOME/Music" )
+    args+=( "--files-from" "$HOME/.config/restic/includes/home" )
     ;;
 
   backup-full-home | bfh)
@@ -66,8 +70,8 @@ case $2 in
 
     args+=(
       "forget"
-      "--host" "apollo.devices.hugoreeves.com"
-      "--group-by" "paths"
+      "--host" "$hostname"
+      "--group-by" "host,tags"
       "--keep-last" "$KEEP_LAST"
       "--keep-hourly" "$RETENTION_HOURS"
       "--keep-daily" "$RETENTION_DAYS"
@@ -83,8 +87,8 @@ case $2 in
     args+=(
       "forget"
       "--prune"
-      "--host" "apollo.devices.hugoreeves.com"
-      "--group-by" "paths"
+      "--host" "$hostname"
+      "--group-by" "host,tags"
       "--keep-last" "$KEEP_LAST"
       "--keep-hourly" "$RETENTION_HOURS"
       "--keep-daily" "$RETENTION_DAYS"

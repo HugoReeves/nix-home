@@ -9,11 +9,15 @@
     vim = "nvim";
 
     p = "gopass";
+    ld = "ledger-default";
     r = "ranger";
     s = "sxiv";
     tma = "tmux attach -t";
     tmns = "tmux new-session -t";
     wet = "curl wttr.in";
+
+    # Quick commands
+    eled = "nvim ~/flow/ledger/ledger.dat";
   };
 
   shellAliases = {
@@ -23,12 +27,16 @@
   promptInit = builtins.readFile ./prompt.fish;
 
   shellInit = ''
-      set PATH (cd $HOME/.config/scripts/ | fd --absolute-path | tr '\n' ':' | sed 's/.$//') $PATH
+      set PATH (fd --absolute-path . $HOME/.config/scripts | tr '\n' ':' | sed 's/.$//') $PATH
+      direnv hook fish | source
       source ~/.ssh/environment > /dev/null
   '';
 
   interactiveShellInit = ''
+    eval (starship init fish)
     source $HOME/.config/fish/fzf-colors.fish
     bind \cb beginning-of-line
   '';
+    # removed
+    # source $HOME/.config/fish/functions/fish_prompt.fish
 }

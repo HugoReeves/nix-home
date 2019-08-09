@@ -3,8 +3,6 @@
   imports = [
     # Files to source for fish config
     ../../program/shell/fish/sources.nix
-    ../../program/file-manager/ranger/index.nix
-
     # Darwin only
     ./script/index.nix
   ];
@@ -19,7 +17,9 @@
   # Fish Shell
   programs.fish = lib.attrsets.recursiveUpdate(import ../../program/shell/fish/default.nix) {
     shellInit = ''
-      set PATH (cd $HOME/.config/scripts/ | fd --absolute-path | tr '\n' ':' | sed 's/.$//') $PATH
+      bass source $HOME/.nix-profile/etc/profile.d/nix.sh
+      direnv hook fish | source
+      set PATH (fd --absolute-path . $HOME/.config/scripts | tr '\n' ':' | sed 's/.$//') $PATH
     '';
   };
 
@@ -31,4 +31,5 @@
   };
 
   home.file.".hammerspoon".source = ../../de/darwin-only/hammerspoon;
+  home.file.".karabiner/karabiner.json".source = ../../de/darwin-only/karabiner/karabiner.json;
 }

@@ -24,10 +24,10 @@
 
   shell = {
     program = "fish";
-    args = [
-      "-C"
-      "neofetch"
-    ];
+    #args = [
+      #"-C"
+      #"/usr/bin/env neofetch"
+    #];
   };
 
   colors = {
@@ -43,7 +43,9 @@
       red =     "0xff8080";
       green =   "0x95ffa4";
       yellow =  "0xffe9aa";
-      blue =    "0x91ddff"; magenta = "0xc991e1"; cyan =    "0xaaffe4";
+      blue =    "0x91ddff";
+      magenta = "0xc991e1";
+      cyan =    "0xaaffe4";
       white =   "0xcbe3e7";
     };
 

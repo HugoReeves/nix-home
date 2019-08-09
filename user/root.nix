@@ -1,20 +1,15 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
     ../program/editor/neovim/default.nix
     ../program/terminal/tmux/default.nix
-
     ../program/file-manager/ranger/index.nix
-    ../program/networking/nmap/index.nix
-
-    ../tool/taskwarrior/index.nix
-
-    ../script/index.nix
+    # Files to source for fish config
+    ../program/shell/fish/sources.nix
   ];
 
   home.packages = with pkgs; [
-
     # Rust CLI Tools! I love rust.
     exa
     bat
@@ -22,38 +17,24 @@
     xsv
     fd
     ripgrep
-    starship
-
-    # Utils
-    ssh-audit
-    nmap
 
     # Common CLI tools
     gnupg
-    gopass
-    weechat
     fzf
-    ledger
-    jrnl
-    taskwarrior
 
     # Development
     neovim
-    terraform_0_12
-    ctags
-    direnv
     tmux
     jq
+    yq
     git-crypt
     dnsutils
     whois
     nodejs
-    yarn
     yq
     go
     elixir
     exercism
-    rustup
     ## Python Dev
     python37Packages.pylint
 
@@ -62,50 +43,32 @@
     zstd
     restic
     ranger
-    croc
-    syncthing
-    gcsfuse
-    qrencode
     #brig
     #ipfs
-
-    # Media
-    youtube-dl
-    imagemagick
 
     # Overview
     htop
     wtf
     lazygit
     neofetch
-
-    # Jokes
-    fortune
-    figlet
-    lolcat
   ];
-
 
   # Git
   programs.git = {
     enable = true;
     userEmail = "hugolreeves@gmail.com";
     userName = "Hugo Reeves";
-    signing.key = "738A0BE6D8D8AE7D";
+    signing.key = "BD939B63A45C6CAE";
     signing.signByDefault = true;
-    extraConfig = {
-      url = {
-        "git@github.com:" = {
-          insteadOf = "https://github.com/";
-        };
-      };
-    };
   };
 
   # Environment
   home.sessionVariables = {
     EDITOR = "nvim";
-    BROWSER = "firefox";
-    TERMINAL = "alacritty";
+    #BROWSER = "firefox";
+    #TERMINAL = "alacritty";
   };
+
+  # Fish Shell
+  programs.fish = import ../program/shell/fish/default.nix;
 }

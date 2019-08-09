@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+feh --bg-fill $(readlink -f $1)
+rm ~/.config/wall.png
+cp $(readlink -f $1) ~/.config/wall.png

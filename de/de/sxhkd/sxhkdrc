@@ -139,6 +139,8 @@ super + {Left,Down,Up,Right}
 super + shift + {Down, Up}
 	bspc node -l {below, above}
 
+super + shift + t
+  bspc node focused -t tiled
 
 #
 # Launch apps quickly
