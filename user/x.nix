@@ -14,6 +14,7 @@
     tokei
     xsv
     fd
+    ripgrep
 
     # Common CLI tools
     gnupg
@@ -27,6 +28,7 @@
     git-crypt
     dnsutils
     whois
+    nodejs
     ## Python Dev
     python37Packages.pylint
 
