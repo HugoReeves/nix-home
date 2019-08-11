@@ -37,7 +37,7 @@ case $2 in
     # Add Args
     args+=( 'backup' )
     args+=( '--tag' 'limited-home' )
-    args+=( "$HOME/.config/" "$HOME/.password-store/" "$HOME/wallpapers/" "$HOME/notes/" )
+    args+=( "--files-from" "$HOME/.config/restic/includes/limited-home" )
     ;;
 
   backup-home | bh)
@@ -48,7 +48,7 @@ case $2 in
     args+=( 'backup' )
     args+=( '--tag' 'home' )
     args+=( '--exclude-file' "$HOME/.config/restic/excludes/home" )
-    args+=( "$HOME/.config/" "$HOME/.password-store/" "$HOME/wallpapers/" "$HOME/notes/" "$HOME/scripts/" "$HOME/dotfiles/" "$HOME/drive" "$HOME/devel" "$HOME/Music" )
+    args+=( "--files-from" "$HOME/.config/restic/includes/home" )
     ;;
 
   backup-full-home | bfh)

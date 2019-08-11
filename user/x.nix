@@ -18,7 +18,7 @@
 
     # Common CLI tools
     gnupg
-    #gopass
+    gopass
     weechat
 
     # Development
@@ -29,6 +29,7 @@
     dnsutils
     whois
     nodejs
+    yq
     ## Python Dev
     python37Packages.pylint
 
@@ -37,7 +38,7 @@
     zstd
     restic
     ranger
-    #croc
+    croc
     #brig
     #ipfs
 

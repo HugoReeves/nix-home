@@ -6,6 +6,8 @@ in
     ../../program/editor/neovim/default.nix
     ../../program/terminal/tmux/default.nix
     ../../program/file-manager/ranger/index.nix
+    # Services
+    ../../services/media/mpd/default.nix
     # Files to source for fish config
     ../../program/shell/fish/sources.nix
     # Scripts
@@ -13,8 +15,12 @@ in
   ];
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.pulseaudio = true;
 
   home.packages = with pkgs; [
+    ncmpcpp
+    zathura
+
     dunst
     compton
   ];
@@ -27,11 +33,11 @@ in
       script = "polybar top &";
     };
 
-    screen-locker = {
-      enable = true;
-      inactiveInterval = 1;
-      lockCmd = "\${pkgs.i3lock-color}/bin/i3lock-color -n -c 000000";
-    };
+    #screen-locker = {
+      #enable = true;
+      #inactiveInterval = 1;
+      #lockCmd = "\${pkgs.i3lock-color}/bin/i3lock-color -n -c 000000";
+    #};
   };
 
   # Fish Shell
