@@ -39,6 +39,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'sainnhe/lightline_foobar.vim'
 " Nerdfont icons and symbols for nerdtree and others
 Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/goyo.vim'
 
 "
 """ Language Specific Stuff
