@@ -20,6 +20,7 @@
     gnupg
     gopass
     weechat
+    fzf
 
     # Development
     neovim

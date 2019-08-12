@@ -13,7 +13,9 @@ Plug 'scrooloose/nerdcommenter'
 " Coc compatable LSP symbol finder and viewer
 Plug 'liuchengxu/vista.vim'
 " Fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug '/usr/bin/env fzf'
+Plug 'junegunn/fzf.vim'
 " Easily surround text objects with other characters
 Plug 'tpope/vim-surround'
 " Integration with livedown for .md previews

@@ -26,7 +26,7 @@
     program = "fish";
     args = [
       "-C"
-      "neofetch"
+      "/usr/bin/env neofetch"
     ];
   };
 

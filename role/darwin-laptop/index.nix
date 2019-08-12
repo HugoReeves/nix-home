@@ -19,6 +19,7 @@
   # Fish Shell
   programs.fish = lib.attrsets.recursiveUpdate(import ../../program/shell/fish/default.nix) {
     shellInit = ''
+      bass source $HOME/.nix-profile/etc/profile.d/nix.sh
       set PATH (cd $HOME/.config/scripts/ | fd --absolute-path | tr '\n' ':' | sed 's/.$//') $PATH
     '';
   };
