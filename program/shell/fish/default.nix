@@ -28,6 +28,7 @@
   '';
 
   interactiveShellInit = ''
+    source $HOME/.config/fish/functions/fish_prompt.fish
     source $HOME/.config/fish/fzf-colors.fish
     bind \cb beginning-of-line
   '';
