@@ -59,5 +59,6 @@ Plug 'fatih/vim-go'
 
 " Other Languages
 Plug 'cespare/vim-toml'
+Plug 'dag/vim-fish'
 
 call plug#end()
