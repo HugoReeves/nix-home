@@ -9,6 +9,7 @@
     vim = "nvim";
 
     p = "gopass";
+    ld = "ledger-default";
     r = "ranger";
     s = "sxiv";
     tma = "tmux attach -t";

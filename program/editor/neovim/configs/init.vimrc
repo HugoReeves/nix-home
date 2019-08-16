@@ -14,7 +14,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'liuchengxu/vista.vim'
 " Fuzzy finder
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plug '/usr/bin/env fzf'
+"Plug '/usr/bin/env fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Easily surround text objects with other characters
 Plug 'tpope/vim-surround'
@@ -60,5 +61,6 @@ Plug 'fatih/vim-go'
 " Other Languages
 Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
+Plug 'ledger/vim-ledger'
 
 call plug#end()
