@@ -9,6 +9,7 @@
     vim = "nvim";
 
     p = "gopass";
+    ld = "ledger-default";
     r = "ranger";
     s = "sxiv";
     tma = "tmux attach -t";
@@ -28,6 +29,7 @@
   '';
 
   interactiveShellInit = ''
+    source $HOME/.config/fish/functions/fish_prompt.fish
     source $HOME/.config/fish/fzf-colors.fish
     bind \cb beginning-of-line
   '';

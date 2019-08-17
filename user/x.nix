@@ -21,6 +21,7 @@
     gopass
     weechat
     fzf
+    ledger
 
     # Development
     neovim

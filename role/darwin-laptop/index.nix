@@ -32,4 +32,5 @@
   };
 
   home.file.".hammerspoon".source = ../../de/darwin-only/hammerspoon;
+  home.file.".karabiner/karabiner.json".source = ../../de/darwin-only/karabiner/karabiner.json;
 }
