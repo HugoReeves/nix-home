@@ -15,6 +15,9 @@
     tma = "tmux attach -t";
     tmns = "tmux new-session -t";
     wet = "curl wttr.in";
+
+    # Quick commands
+    eled = "nvim ~/ledger/ledger.dat";
   };
 
   shellAliases = {
