@@ -22,6 +22,7 @@
     weechat
     fzf
     ledger
+    jrnl
 
     # Development
     neovim
