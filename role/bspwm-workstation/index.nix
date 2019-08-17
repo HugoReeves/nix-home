@@ -3,13 +3,8 @@ let location = import ./location.nix;
 in
 {
   imports = [
-    ../../program/editor/neovim/default.nix
-    ../../program/terminal/tmux/default.nix
-    ../../program/file-manager/ranger/index.nix
     # Services
     ../../services/media/mpd/default.nix
-    # Files to source for fish config
-    ../../program/shell/fish/sources.nix
     # Scripts
     ./script/index.nix
   ];
@@ -33,15 +28,16 @@ in
       script = "polybar top &";
     };
 
-    #screen-locker = {
-      #enable = true;
-      #inactiveInterval = 1;
-      #lockCmd = "\${pkgs.i3lock-color}/bin/i3lock-color -n -c 000000";
-    #};
+    redshift = {
+      enable = true;
+      latitude = location.latitude;
+      longitude = location.longitude;
+      temperature = {
+        day = 5700;
+        night = 3000;
+      };
+    };
   };
-
-  # Fish Shell
-  programs.fish = import ../../program/shell/fish/default.nix;
 
   # Environment
   home.sessionVariables = {
@@ -60,17 +56,6 @@ in
       };
     };
   };
-
-  services.redshift = {
-    enable = true;
-    latitude = location.latitude;
-    longitude = location.longitude;
-    temperature = {
-      day = 5700;
-      night = 3000;
-    };
-  };
-
 
   xdg.configFile = {
     "bspwm".source = ../../de/de/bspwm;
