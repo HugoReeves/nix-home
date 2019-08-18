@@ -5,6 +5,8 @@
     ../program/editor/neovim/default.nix
     ../program/terminal/tmux/default.nix
     ../script/index.nix
+
+    ../tool/taskwarrior/index.nix
   ];
 
   home.packages = with pkgs; [
