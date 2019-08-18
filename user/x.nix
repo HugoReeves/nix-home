@@ -10,7 +10,6 @@
     ../tool/taskwarrior/index.nix
 
     ../script/index.nix
-
   ];
 
   home.packages = with pkgs; [
@@ -29,6 +28,8 @@
     fzf
     ledger
     jrnl
+    taskwarrior
+    #tasksh
 
     # Development
     neovim
