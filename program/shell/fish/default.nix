@@ -17,7 +17,7 @@
     wet = "curl wttr.in";
 
     # Quick commands
-    eled = "nvim ~/ledger/ledger.dat";
+    eled = "nvim ~/flow/ledger/ledger.dat";
   };
 
   shellAliases = {

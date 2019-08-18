@@ -3,6 +3,8 @@ let location = import ./location.nix;
 in
 {
   imports = [
+    # Files to source for fish config
+    ../../program/shell/fish/sources.nix
     # Services
     ../../services/media/mpd/default.nix
     # Scripts
@@ -45,6 +47,8 @@ in
     BROWSER = "firefox";
     TERMINAL = "alacritty";
   };
+
+  programs.fish = import ../../program/shell/fish/default.nix;
 
   programs.alacritty = {
     enable = true;

@@ -3,8 +3,6 @@
   imports = [
     # Files to source for fish config
     ../../program/shell/fish/sources.nix
-    ../../program/file-manager/ranger/index.nix
-
     # Darwin only
     ./script/index.nix
   ];

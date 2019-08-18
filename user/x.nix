@@ -1,12 +1,16 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
     ../program/editor/neovim/default.nix
     ../program/terminal/tmux/default.nix
-    ../script/index.nix
+
+    ../program/file-manager/ranger/index.nix
 
     ../tool/taskwarrior/index.nix
+
+    ../script/index.nix
+
   ];
 
   home.packages = with pkgs; [
@@ -62,6 +66,7 @@
     figlet
     lolcat
   ];
+
 
   # Git
   programs.git = {
