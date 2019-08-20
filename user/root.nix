@@ -20,7 +20,6 @@
 
     # Common CLI tools
     gnupg
-    gopass
     fzf
 
     # Development
@@ -29,12 +28,19 @@
     jq
     yq
     git-crypt
+    dnsutils
+    whois
     nodejs
+    yq
+    go
+    elixir
+    exercism
     ## Python Dev
     python37Packages.pylint
 
 
     # Files
+    zstd
     restic
     ranger
     #brig

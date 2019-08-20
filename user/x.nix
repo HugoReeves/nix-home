@@ -40,6 +40,9 @@
     whois
     nodejs
     yq
+    go
+    elixir
+    exercism
     ## Python Dev
     python37Packages.pylint
 
@@ -49,6 +52,7 @@
     restic
     ranger
     croc
+    syncthing
     #brig
     #ipfs
 
