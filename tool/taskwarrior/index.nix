@@ -3,6 +3,6 @@
   programs.taskwarrior = {
     enable = true;
     config = {};
-    dataLocation = "~/flow/tasks";
+    dataLocation = "${config.home.homeDirectory}/flow/tasks";
   };
 }
