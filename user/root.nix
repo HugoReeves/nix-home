@@ -58,7 +58,7 @@
     enable = true;
     userEmail = "hugolreeves@gmail.com";
     userName = "Hugo Reeves";
-    signing.key = "738A0BE6D8D8AE7D";
+    signing.key = "BD939B63A45C6CAE";
     signing.signByDefault = true;
   };
 
