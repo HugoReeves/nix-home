@@ -62,5 +62,6 @@ Plug 'fatih/vim-go'
 Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
 Plug 'ledger/vim-ledger'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
