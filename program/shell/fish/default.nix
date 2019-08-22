@@ -28,6 +28,7 @@
 
   shellInit = ''
       set PATH (fd --absolute-path . $HOME/.config/scripts | tr '\n' ':' | sed 's/.$//') $PATH
+      direnv hook fish | source
       source ~/.ssh/environment > /dev/null
   '';
 
