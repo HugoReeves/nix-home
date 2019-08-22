@@ -33,6 +33,7 @@
 
     # Development
     neovim
+    ctags
     tmux
     jq
     git-crypt
@@ -43,6 +44,7 @@
     go
     elixir
     exercism
+    rustup
     ## Python Dev
     python37Packages.pylint
 
