@@ -22,6 +22,7 @@ nnoremap <leader>f :GFiles<CR>
 nnoremap <leader>F :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>h :History<CR>
+nnoremap <leader>G :Rg<CR>
 "nnoremap <leader>t :BTags<CR>
 "nnoremap <leader>T :Tags<CR>
 

@@ -29,17 +29,18 @@
     ledger
     jrnl
     taskwarrior
-    #tasksh
 
     # Development
     neovim
     ctags
+    direnv
     tmux
     jq
     git-crypt
     dnsutils
     whois
     nodejs
+    yarn
     yq
     go
     elixir
