@@ -67,7 +67,7 @@ case $2 in
     args+=(
       "forget"
       "--host" "$hostname"
-      "--group-by" "paths"
+      "--group-by" "host,tags"
       "--keep-last" "$KEEP_LAST"
       "--keep-hourly" "$RETENTION_HOURS"
       "--keep-daily" "$RETENTION_DAYS"
@@ -84,7 +84,7 @@ case $2 in
       "forget"
       "--prune"
       "--host" "$hostname"
-      "--group-by" "paths"
+      "--group-by" "host,tags"
       "--keep-last" "$KEEP_LAST"
       "--keep-hourly" "$RETENTION_HOURS"
       "--keep-daily" "$RETENTION_DAYS"
