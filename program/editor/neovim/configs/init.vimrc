@@ -52,5 +52,6 @@ Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
 Plug 'ledger/vim-ledger'
 Plug 'rust-lang/rust.vim'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
