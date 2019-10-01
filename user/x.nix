@@ -32,6 +32,7 @@
 
     # Development
     neovim
+    terraform_0_12
     ctags
     direnv
     tmux
