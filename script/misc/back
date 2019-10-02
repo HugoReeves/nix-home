@@ -23,7 +23,7 @@ case $1 in
   *)
     echo "The first argument is the repository to use for the backup, the options are..."
     echo "gcs: Google cloud storage repository."
-    echo "pd | public-drive: Public hard drive mounted at /Volumes/public"
+    echo "pd | public-drive: Public hard drive mounted at a common mountpoint, see ~/.config/restic/envs/backup-drive/env.sh"
     exit
     ;;
 esac
@@ -32,7 +32,6 @@ esac
 case $2 in
   backup-limited-home | blh)
     echo "Backing up limited home."
-    echo "Directories: ~/.config/ ~/.password-store/ ~/wallpapers/ ~/notes/"
 
     # Add Args
     args+=( 'backup' )
@@ -42,7 +41,6 @@ case $2 in
 
   backup-home | bh)
     echo "Backing up important user data home directories."
-    echo "Directories: ~/.config/ ~/.password-store/ ~/wallpapers/ ~/notes/ ~/scripts/ ~/dotfiles/ ~/drive ~/devel ~/Music"
 
     # Add Args
     args+=( 'backup' )
