@@ -33,8 +33,10 @@
   '';
 
   interactiveShellInit = ''
-    source $HOME/.config/fish/functions/fish_prompt.fish
+    eval (starship init fish)
     source $HOME/.config/fish/fzf-colors.fish
     bind \cb beginning-of-line
   '';
+    # removed
+    # source $HOME/.config/fish/functions/fish_prompt.fish
 }
