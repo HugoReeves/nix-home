@@ -20,6 +20,7 @@
     xsv
     fd
     ripgrep
+    starship
 
     # Common CLI tools
     gnupg
@@ -57,6 +58,7 @@
     ranger
     croc
     syncthing
+    gcsfuse
     #brig
     #ipfs
 
