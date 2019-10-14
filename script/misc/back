@@ -20,10 +20,16 @@ case $1 in
     echo "Running command using backup drive filesystem, repository: $RESTIC_REPOSITORY"
     ;;
 
+  airport | ap)
+    source $HOME/.config/restic/envs/airport/env.sh
+    echo "Running command using airport primary/hugo, repository: $RESTIC_REPOSITORY"
+    ;;
+
   *)
     echo "The first argument is the repository to use for the backup, the options are..."
     echo "gcs: Google cloud storage repository."
     echo "pd | public-drive: Public hard drive mounted at a common mountpoint, see ~/.config/restic/envs/backup-drive/env.sh"
+    echo "ap | airport: Apple airport timecapsule"
     exit
     ;;
 esac

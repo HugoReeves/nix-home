@@ -13,6 +13,8 @@
   ];
 
   home.packages = with pkgs; [
+    # Utils
+
     # Rust CLI Tools! I love rust.
     exa
     bat

@@ -1,13 +1,13 @@
 function restic-pd
   set repo ""
-  if test -d "/Volumes/public/restic"
-    set repo /Volumes/public/restic/
+  if test -d "/Volumes/main/restic"
+    set repo /Volumes/main/restic/
   else if test -d "$HOME/mnt/restic"
     set repo "$HOME/mnt/restic"
   else if test -d "/mnt/restic"
     set repo /mnt/restic
-  else if test -d "/mnt/public/restic"
-    set repo /mnt/public/restic
+  else if test -d "/mnt/main/restic"
+    set repo /mnt/main/restic
   else
     echo "Drive not found at any logical mount point, exiting"
     exit 1
