@@ -13,7 +13,6 @@
   ];
 
   home.packages = with pkgs; [
-    # Utils
 
     # Rust CLI Tools! I love rust.
     exa
@@ -23,6 +22,8 @@
     fd
     ripgrep
     starship
+
+    # Utils
 
     # Common CLI tools
     gnupg
@@ -61,6 +62,7 @@
     croc
     syncthing
     gcsfuse
+    qrencode
     #brig
     #ipfs
 
