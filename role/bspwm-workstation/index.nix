@@ -5,6 +5,7 @@ in
   imports = [
     # Files to source for fish config
     ../../program/shell/fish/sources.nix
+    ../../program/networking/ssh/index.nix
     # Services
     ../../services/media/mpd/default.nix
     # Scripts
@@ -59,6 +60,10 @@ in
         decorations = "full"; 
       };
     };
+  };
+
+  programs.gpg = {
+    enable = true;
   };
 
   xdg.configFile = {
