@@ -24,6 +24,7 @@
     starship
 
     # Utils
+    ssh-audit
 
     # Common CLI tools
     gnupg
