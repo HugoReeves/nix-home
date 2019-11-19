@@ -14,6 +14,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Easily surround text objects with other characters
 Plug 'tpope/vim-surround'
+" Smooth scrolling
+Plug 'psliwka/vim-smoothie'
 " Vim Tables
 "Plug 'dhruvasagar/vim-table-mode'
 

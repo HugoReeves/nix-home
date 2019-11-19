@@ -65,6 +65,12 @@ in
   programs.gpg = {
     enable = true;
   };
+  services.gpg-agent = {
+    enable = true;
+    extraConfig = ''
+      pinentry-program /run/current-system/sw/bin/pinentry-gtk-2
+    '';
+  };
 
   xdg.configFile = {
     "bspwm".source = ../../de/de/bspwm;

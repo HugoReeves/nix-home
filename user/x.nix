@@ -90,6 +90,13 @@
     userName = "Hugo Reeves";
     signing.key = "738A0BE6D8D8AE7D";
     signing.signByDefault = true;
+    extraConfig = {
+      url = {
+        "git@github.com:" = {
+          insteadOf = "https://github.com/";
+        };
+      };
+    };
   };
 
   # Environment
