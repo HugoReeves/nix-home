@@ -6,6 +6,7 @@
     ../program/terminal/tmux/default.nix
 
     ../program/file-manager/ranger/index.nix
+    ../program/networking/nmap/index.nix
 
     ../tool/taskwarrior/index.nix
 
@@ -25,6 +26,7 @@
 
     # Utils
     ssh-audit
+    nmap
 
     # Common CLI tools
     gnupg
