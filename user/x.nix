@@ -23,6 +23,7 @@
     fd
     ripgrep
     starship
+    hyperfine
 
     # Utils
     ssh-audit
