@@ -3,7 +3,7 @@
     "TERM" = "xterm-256color";
   };
 
-  background_opacity = 0.95;
+  background_opacity = 0.90;
 
   window = {
     padding.x = 10;

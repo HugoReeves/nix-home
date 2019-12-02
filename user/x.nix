@@ -16,14 +16,18 @@
   home.packages = with pkgs; [
 
     # Rust CLI Tools! I love rust.
-    exa
     bat
-    tokei
-    xsv
+    exa
     fd
+    fd
+    hyperfine
+    ripgrep
     ripgrep
     starship
-    hyperfine
+    starship
+    tokei
+    topgrade
+    xsv
 
     # Utils
     ssh-audit
@@ -39,22 +43,22 @@
     taskwarrior
 
     # Development
-    neovim
-    terraform_0_12
     ctags
     direnv
-    tmux
-    jq
-    git-crypt
     dnsutils
-    whois
-    nodejs
-    yarn
-    yq
-    go
     elixir
     exercism
+    git-crypt
+    go
+    jq
+    neovim
+    nodejs
     rustup
+    terraform_0_12
+    tmux
+    whois
+    yarn
+    yq
     ## Python Dev
     python37Packages.pylint
 

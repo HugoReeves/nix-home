@@ -64,6 +64,9 @@ in
 
   programs.gpg = {
     enable = true;
+    settings = {
+      default-key = "0x0D1B79A7E1CB7A60";
+    };
   };
   services.gpg-agent = {
     enable = true;
