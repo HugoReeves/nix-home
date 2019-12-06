@@ -19,7 +19,11 @@
     bat
     exa
     fd
+    fd
+    hyperfine
     ripgrep
+    ripgrep
+    starship
     starship
     tokei
     topgrade
