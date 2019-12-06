@@ -30,13 +30,14 @@
     nmap
 
     # Common CLI tools
+    fzf
     gnupg
     gopass
-    weechat
-    fzf
-    ledger
     jrnl
+    ledger
     taskwarrior
+    weechat
+    termtosvg
 
     # Development
     ctags
