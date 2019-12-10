@@ -65,15 +65,16 @@
 
 
     # Files
-    zstd
-    restic
-    ranger
-    croc
-    syncthing
-    gcsfuse
-    qrencode
     #brig
     #ipfs
+    croc
+    gcsfuse
+    gocryptfs
+    qrencode
+    ranger
+    restic
+    syncthing
+    zstd
 
     # Media
     youtube-dl
