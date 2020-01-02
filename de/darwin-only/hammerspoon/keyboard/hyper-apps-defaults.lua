@@ -6,10 +6,10 @@
 return {
   { 'a', 'Spotify' },            -- "A" for "Apple Music"
   { 'b', 'Firefox' },     -- "B" for "Browser"
-  { 'd', 'Things 3' }, -- "D" for "Do!" ... or "Done!"
+  { 'd', 'ClickUp' }, -- "D" for "Do!" ... or "Done!"
   { 'e', 'Visual Studio Code' },              -- "E" for "Editor"
   { 'f', 'Finder' },            -- "F" for "Finder"
-  { 'g', 'Airmail' },       -- "G" for "Gmail"
+  { 'g', 'Mailspring' },       -- "G" for "Gmail"
   { 's', 'Slack' },             -- "S" for "Slack"
   { 't', 'Alacritty' },             -- "T" for "Terminal"
 }

@@ -20,6 +20,7 @@
     exa
     fd
     fd
+    hexyl
     hyperfine
     ripgrep
     ripgrep
@@ -34,14 +35,16 @@
     nmap
 
     # Common CLI tools
+    bitwarden-cli
     fzf
     gnupg
+    gnutar
     gopass
     jrnl
     ledger
     taskwarrior
-    weechat
     termtosvg
+    #weechat
 
     # Development
     ctags
@@ -52,12 +55,15 @@
     git-crypt
     go
     jq
+    lua
+    luarocks
     neovim
     nodejs
     rustup
     terraform_0_12
     tmux
     whois
+    wrk
     yarn
     yq
     ## Python Dev
@@ -66,7 +72,7 @@
 
     # Files
     #brig
-    #ipfs
+    ipfs
     croc
     gcsfuse
     gocryptfs

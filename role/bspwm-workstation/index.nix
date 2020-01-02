@@ -65,7 +65,7 @@ in
   programs.gpg = {
     enable = true;
     settings = {
-      default-key = "0x0D1B79A7E1CB7A60";
+      default-key = "F3F42E1F26FE5C63A19D3061FA5C94EDD085C989";
     };
   };
   services.gpg-agent = {
