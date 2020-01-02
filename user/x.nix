@@ -29,6 +29,7 @@
     tokei
     topgrade
     xsv
+    nushell
 
     # Utils
     ssh-audit
