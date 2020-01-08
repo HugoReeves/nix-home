@@ -3,15 +3,15 @@
   "tslint.configFile": "tslint.json",
 	"languageserver": {
 		"golang": {
-			// install with go get -u github.com/sourcegraph/go-langserver<Paste>
-      			"command": "go-langserver",
-      			"filetypes": ["go"],
-      			"initializationOptions": {
-	      			"gocodeCompletionEnabled": true,
-	      			"diagnosticsEnabled": true,
-	      			"lintTool": "golint"
-      			}
+        "command": "go-langserver",
+        "filetypes": ["go"],
+        "initializationOptions": {
+          "gocodeCompletionEnabled": true,
+          "diagnosticsEnabled": true,
+          "lintTool": "golint"
+        }
 		}
 	},
-  "python.pythonPath": "python3"
+  "python.pythonPath": "python3",
+  "rust-analyzer.raLspServerPath": "/Users/x/.cargo/bin/ra_lsp_server"
 }

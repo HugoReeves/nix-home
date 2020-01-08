@@ -16,12 +16,14 @@
   home.packages = with pkgs; [
 
     # Rust CLI Tools! I love rust.
+    bandwhich
     bat
     exa
     fd
     fd
     hexyl
     hyperfine
+    nushell
     ripgrep
     ripgrep
     starship
@@ -29,7 +31,6 @@
     tokei
     topgrade
     xsv
-    nushell
 
     # Utils
     ssh-audit
