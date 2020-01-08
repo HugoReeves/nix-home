@@ -9,6 +9,7 @@
     vim = "nvim";
 
     p = "gopass";
+    g = "git";
     ld = "ledger-default";
     r = "ranger";
     s = "sxiv";
@@ -17,7 +18,6 @@
     wet = "curl wttr.in";
 
     # Quick commands
-    eled = "nvim ~/flow/ledger/ledger.dat";
   };
 
   shellAliases = {

@@ -106,7 +106,7 @@
     enable = true;
     userEmail = "hugolreeves@gmail.com";
     userName = "Hugo Reeves";
-    signing.key = "738A0BE6D8D8AE7D";
+    signing.key = "F3F42E1F26FE5C63A19D3061FA5C94EDD085C989";
     signing.signByDefault = true;
     extraConfig = {
       url = {
@@ -114,6 +114,21 @@
           insteadOf = "https://github.com/";
         };
       };
+    };
+    # Aliases
+    aliases = {
+      "s" = "status";
+      "co" = "checkout";
+      "br" = "branch";
+      # Commits, additions, and modifications
+      "cm" = "commit -m";
+      "aa" = "add .";
+      "rh" = "reset --hard";
+      # Logging
+      "lgo" = "log --oneline --graph";
+      "lo" = "log --oneline";
+      "ln" = "log -n"; # follow with a number to show n logs
+      "lon" = "log --oneline -n"; # follow with a number to show n logs
     };
   };
 
