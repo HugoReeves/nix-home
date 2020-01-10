@@ -98,6 +98,7 @@
     fortune
     figlet
     lolcat
+    nms
   ];
 
 
