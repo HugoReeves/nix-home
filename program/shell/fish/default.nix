@@ -2,8 +2,6 @@
   enable = true;
 
   shellAbbrs = {
-    cat = "bat";
-    ls = "exa";
 
     v = "nvim";
     vim = "nvim";
@@ -17,7 +15,10 @@
     tmns = "tmux new-session -t";
     wet = "curl wttr.in";
 
-    # Quick commands
+    # Alias like
+    cat = "bat";
+    ls = "exa";
+    tree = "exa -T";
   };
 
   shellAliases = {

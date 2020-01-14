@@ -18,6 +18,7 @@
     # Rust CLI Tools! I love rust.
     bandwhich
     bat
+    broot
     exa
     fd
     fd
@@ -72,7 +73,7 @@
     python37Packages.pylint
 
 
-    # Files
+    # Files and networking
     #brig
     ipfs
     croc
