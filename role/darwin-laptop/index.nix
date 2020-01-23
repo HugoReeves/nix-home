@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, attrsets, ... }:
 {
   imports = [
     # Files to source for fish config

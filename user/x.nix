@@ -36,6 +36,7 @@
     # Utils
     ssh-audit
     nmap
+    age
 
     # Common CLI tools
     bitwarden-cli
