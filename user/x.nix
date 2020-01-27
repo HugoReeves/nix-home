@@ -57,6 +57,7 @@
     elixir
     exercism
     git-crypt
+    gitAndTools.gitflow
     go
     jq
     lua
