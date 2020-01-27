@@ -108,7 +108,7 @@
   # Git
   programs.git = {
     enable = true;
-    userEmail = "hugolreeves@gmail.com";
+    userEmail = "hugo@hugoreeves.com";
     userName = "Hugo Reeves";
     signing.key = "F3F42E1F26FE5C63A19D3061FA5C94EDD085C989";
     signing.signByDefault = true;
