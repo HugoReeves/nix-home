@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 tmpbg='/tmp/lockscreen.png'
-wall="$HOME/.background-image"
+wall="$HOME/.config/wall.png"
 
 # Use wall
 notify-send "Locking screen..." &&

@@ -13,5 +13,5 @@
 		}
 	},
   "python.pythonPath": "python3",
-  "rust-analyzer.raLspServerPath": "/Users/x/.cargo/bin/ra_lsp_server"
+  "rust-analyzer.raLspServerPath": "$HOME/.cargo/bin/ra_lsp_server"
 }

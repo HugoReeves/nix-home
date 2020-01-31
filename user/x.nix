@@ -58,6 +58,7 @@
     exercism
     git-crypt
     gitAndTools.gitflow
+    glow
     go
     jq
     lua
