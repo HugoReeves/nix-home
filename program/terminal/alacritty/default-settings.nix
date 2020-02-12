@@ -15,9 +15,9 @@
     size = 12.0;
     use_thin_strokes = true;
 
-    normal.family = "FuraCode Nerd Font";
-    bold.family = "FuraCode Nerd Font";
-    italic.family = "FuraCode Nerd Font";
+    normal.family = "FiraCode Nerd Font";
+    bold.family = "FiraCode Nerd Font";
+    italic.family = "FiraCode Nerd Font";
   };
 
   cursor.style = "Beam";

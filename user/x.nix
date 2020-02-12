@@ -39,7 +39,6 @@
     age
 
     # Common CLI tools
-    bitwarden-cli
     fzf
     gnupg
     gnutar
