@@ -60,6 +60,7 @@
     glow
     go
     jq
+    lorri
     lua
     luarocks
     neovim
