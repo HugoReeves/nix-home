@@ -34,9 +34,10 @@
     xsv
 
     # Utils
-    ssh-audit
-    nmap
     age
+    nmap
+    ssh-audit
+    ytop
 
     # Common CLI tools
     fzf
@@ -59,6 +60,7 @@
     gitAndTools.gitflow
     glow
     go
+    python37Packages.jupyterlab
     jq
     lorri
     lua
@@ -99,6 +101,7 @@
     neofetch
 
     # Jokes
+    cowsay
     fortune
     figlet
     lolcat
