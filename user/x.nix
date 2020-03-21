@@ -24,6 +24,7 @@
     fd
     hexyl
     hyperfine
+    navi
     nushell
     ripgrep
     ripgrep
@@ -55,17 +56,16 @@
     direnv
     dnsutils
     elixir
-    exercism
+    #exercism
     git-crypt
     gitAndTools.gitflow
-    glow
+    #glow
     go
-    python37Packages.jupyterlab
     jq
     lorri
     lua
     luarocks
-    neovim
+    #neovim
     nodejs
     rustup
     terraform_0_12
@@ -75,12 +75,13 @@
     yarn
     yq
     ## Python Dev
+    python37Packages.jupyterlab
     python37Packages.pylint
 
 
     # Files and networking
     #brig
-    ipfs
+    #ipfs
     croc
     gcsfuse
     gocryptfs
@@ -106,6 +107,8 @@
     figlet
     lolcat
     nms
+  ] ++ lib.optionals stdenv.isLinux [
+    thunderbird
   ];
 
 

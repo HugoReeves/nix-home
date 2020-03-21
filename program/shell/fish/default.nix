@@ -36,6 +36,7 @@
   interactiveShellInit = ''
     eval (starship init fish)
     source $HOME/.config/fish/fzf-colors.fish
+    zoxide init fish | source
     bind \cb beginning-of-line
   '';
     # removed
