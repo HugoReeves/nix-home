@@ -24,7 +24,7 @@
     fd
     hexyl
     hyperfine
-    navi
+    #navi
     nushell
     ripgrep
     ripgrep
