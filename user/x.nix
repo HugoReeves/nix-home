@@ -24,7 +24,7 @@
     fd
     hexyl
     hyperfine
-    navi
+    #navi
     nushell
     ripgrep
     ripgrep
@@ -39,6 +39,8 @@
     nmap
     ssh-audit
     ytop
+    pueue
+    zoxide
 
     # Common CLI tools
     fzf
@@ -56,16 +58,17 @@
     direnv
     dnsutils
     elixir
-    #exercism
+    exercism
     git-crypt
     gitAndTools.gitflow
-    #glow
+    glow
+    gnumake
     go
     jq
     lorri
     lua
     luarocks
-    #neovim
+    neovim
     nodejs
     rustup
     terraform_0_12
@@ -90,6 +93,7 @@
     restic
     syncthing
     zstd
+    magic-wormhole
 
     # Media
     youtube-dl
@@ -108,7 +112,9 @@
     lolcat
     nms
   ] ++ lib.optionals stdenv.isLinux [
-    thunderbird
+    anki
+    joplin-desktop
+    standardnotes
   ];
 
 
