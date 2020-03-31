@@ -8,6 +8,7 @@ in
     ../../program/networking/ssh/index.nix
     # Services
     ../../services/media/mpd/default.nix
+    ../../services/dev/lorri/default.nix
     # Scripts
     ./script/index.nix
   ];
