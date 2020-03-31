@@ -88,12 +88,13 @@
     croc
     gcsfuse
     gocryptfs
+    magic-wormhole
     qrencode
     ranger
     restic
+    sshfs
     syncthing
     zstd
-    magic-wormhole
 
     # Media
     youtube-dl
