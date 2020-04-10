@@ -13,6 +13,12 @@
     ../script/index.nix
   ];
 
+
+  # Temporary, hopefully this will be unnecesary in future unstable versions.
+  nixpkgs.config.permittedInsecurePackages = [
+     "openssl-1.0.2u"
+   ];
+
   home.packages = with pkgs; [
 
     # Rust CLI Tools! I love rust.
@@ -92,7 +98,6 @@
     qrencode
     ranger
     restic
-    sshfs
     syncthing
     zstd
 
@@ -113,9 +118,13 @@
     lolcat
     nms
   ] ++ lib.optionals stdenv.isLinux [
+    # Graphical
     anki
     joplin-desktop
     standardnotes
+
+    # Files and Networking
+    sshfs
   ];
 
 
