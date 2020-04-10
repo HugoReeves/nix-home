@@ -3,7 +3,7 @@
 {
   services.mpd = {
     enable = true;
-    musicDirectory = "${config.home.homeDirectory}/media/audio";
+    musicDirectory = "/media/audio";
     playlistDirectory = "${config.home.homeDirectory}/media/audio/mpd-playlists";
     dataDir = "${config.xdg.dataHome}/mpd";
     extraConfig = ''
