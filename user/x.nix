@@ -123,6 +123,9 @@
     joplin-desktop
     standardnotes
 
+    # Devlopment Graphical
+    android-studio
+
     # Files and Networking
     sshfs
   ];
