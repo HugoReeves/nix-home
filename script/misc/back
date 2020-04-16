@@ -15,8 +15,13 @@ case $1 in
     args+=( "--option" "gs.connections=$GS_CONNECTIONS" )
     ;;
 
-  public-drive | pd)
-    source $HOME/.config/restic/envs/backup-drive/env.sh
+  slow-drive | sd)
+    source $HOME/.config/restic/envs/slow-drive/env.sh
+    echo "Running command using backup drive filesystem, repository: $RESTIC_REPOSITORY"
+    ;;
+
+  fast-drive | fd)
+    source $HOME/.config/restic/envs/fast-drive/env.sh
     echo "Running command using backup drive filesystem, repository: $RESTIC_REPOSITORY"
     ;;
 
