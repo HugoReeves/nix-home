@@ -31,6 +31,7 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'ayu-theme/ayu-vim'
 " General text theme
 Plug 'challenger-deep-theme/vim', { 'name': 'challenger-deep' }
+Plug 'arcticicestudio/nord-vim'
 " Statusline
 Plug 'itchyny/lightline.vim'
 " Extras for lightline
@@ -55,5 +56,7 @@ Plug 'dag/vim-fish'
 Plug 'ledger/vim-ledger'
 Plug 'rust-lang/rust.vim'
 Plug 'hashivim/vim-terraform'
+Plug 'dart-lang/dart-vim-plugin'
+
 
 call plug#end()

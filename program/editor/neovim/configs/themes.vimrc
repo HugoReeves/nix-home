@@ -1,6 +1,6 @@
 " Theme stuff
-colorscheme challenger_deep
-let g:lightline.colorscheme = 'challenger_deep'
+colorscheme nord
+let g:lightline.colorscheme = 'nord'
 hi PMenu guibg=#100e23
 highlight clear ALEErrorSign
 highlight ALEWarningSign guifg=yellow
@@ -17,4 +17,4 @@ hi DiffChange guibg=#ffb378 guifg=black
 hi DiffText guibg=#ffe9aa guifg=black
 
 " The Defaults
-let g:VIM_COLOR_SCHEME = 'challenger_deep'
+let g:VIM_COLOR_SCHEME = 'nord'
