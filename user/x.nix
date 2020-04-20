@@ -35,7 +35,6 @@
     ripgrep
     ripgrep
     starship
-    starship
     tokei
     topgrade
     xsv
