@@ -23,8 +23,8 @@ background = #882f343f
 background-alt = #ee2f343f
 foreground = #f3f4f5
 foreground-alt = #f3f4f5
-primary = #ffb52a
-secondary = #e60053
+primary = #81a1c1
+secondary = #d8dee9
 alert = #bd2c40
 col = #00f
 

@@ -58,3 +58,11 @@ set splitright
 set diffopt=vertical
 
 set completeopt=menu,menuone,preview,noselect,noinsert
+
+""" BEGIN Language Specific
+"
+autocmd FileType dart setlocal shiftwidth=2 tabstop=2
+
+
+"
+""" END Language Specific

@@ -124,6 +124,7 @@
 
     # Devlopment Graphical
     android-studio
+    vscode
 
     # Files and Networking
     sshfs
