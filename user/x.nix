@@ -70,6 +70,7 @@
     neovim
     nixpkgs-fmt
     nodejs
+    pre-commit
     rustup
     terraform_0_12
     tmux
