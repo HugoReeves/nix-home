@@ -7,11 +7,13 @@
 
     ../program/file-manager/ranger/index.nix
     ../program/networking/nmap/index.nix
+    ../program/networking/ssh/index.nix
 
     ../script/index.nix
   ];
 
-  elemental.program.editor.neovim.enable = true;
+  elemental.home.program.editor.neovim.enable = true;
+  elemental.home.program.networking.ssh.enable = true;
 
   home.packages = with pkgs; [
     # Rust CLI Tools! I love rust.

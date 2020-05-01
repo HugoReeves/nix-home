@@ -1,14 +1,15 @@
 { config, lib, pkgs, ... }:
 let
-  cfg = config.elemental.program.editor.neovim;
+  cfg = config.elemental.home.program.editor.neovim;
   coc = import ./coc.nix;
-in {
-  options.elemental.program.editor.neovim = {
+in
+{
+  options.elemental.home.program.editor.neovim = {
     enable = lib.mkEnableOption "Enable the neovim editor";
   };
 
   config = lib.mkIf cfg.enable {
-    home.packages = [pkgs.neovim];
+    home.packages = [ pkgs.neovim ];
 
     xdg.configFile."nvim/coc-settings.json".source =
       builtins.toFile "coc-settings.json" (builtins.toJSON (coc { config = config; }));
