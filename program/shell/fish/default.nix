@@ -2,15 +2,13 @@
   enable = true;
 
   shellAbbrs = {
-
     v = "nvim";
     vim = "nvim";
 
     p = "gopass";
     g = "git";
-    ld = "ledger-default";
+    c = "cargo";
     r = "ranger";
-    s = "sxiv";
     tma = "tmux attach -t";
     tmns = "tmux new-session -t";
     wet = "curl wttr.in";
@@ -18,7 +16,10 @@
     # Alias like
     cat = "bat";
     ls = "exa";
-    tree = "exa -T";
+    l = "exa";
+    ll = "exa -l";
+    lll = "exa -la";
+    lt = "exa -T";
   };
 
   shellAliases = {
@@ -39,6 +40,4 @@
     zoxide init fish | source
     bind \cb beginning-of-line
   '';
-    # removed
-    # source $HOME/.config/fish/functions/fish_prompt.fish
 }

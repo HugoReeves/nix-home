@@ -8,8 +8,6 @@
     ../program/file-manager/ranger/index.nix
     ../program/networking/nmap/index.nix
 
-    ../tool/taskwarrior/index.nix
-
     ../script/index.nix
   ];
 
@@ -53,11 +51,7 @@
     gnupg
     gnutar
     gopass
-    jrnl
-    ledger
-    taskwarrior
     termtosvg
-    #weechat
 
     # Development
     ctags
@@ -75,12 +69,11 @@
     lua
     luarocks
     neovim
+    nixpkgs-fmt
     nodejs
     rustup
     terraform_0_12
     tmux
-    whois
-    wrk
     yarn
     yq
     ## Python Dev
@@ -99,6 +92,8 @@
     ranger
     restic
     syncthing
+    whois
+    wrk
     zstd
 
     # Media

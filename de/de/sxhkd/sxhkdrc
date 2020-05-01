@@ -1,5 +1,12 @@
+#Rebind keys
+#sh+ {shift, _}
+  #{xte "keydown Caps_Lock" "keyup Caps_Lock", xte "keydown Escape" "keyup Escape"}
+
+#
 #
 # wm independent hotkeys
+#
+#
 #
 
 # terminal emulator

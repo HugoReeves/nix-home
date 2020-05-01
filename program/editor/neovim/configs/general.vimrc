@@ -61,8 +61,11 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 
 """ BEGIN Language Specific
 "
+" BEGIN Dart
 autocmd FileType dart setlocal shiftwidth=2 tabstop=2
-
-
+" END Dart
+" BEGIN Rust
+let g:rustfmt_autosave = 1
+" END Rust
 "
 """ END Language Specific
