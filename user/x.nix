@@ -11,14 +11,9 @@
     ../script/index.nix
   ];
 
-
-  # Temporary, hopefully this will be unnecesary in future unstable versions.
-  nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.0.2u"
-  ];
+  elemental.program.editor.neovim.enable = true;
 
   home.packages = with pkgs; [
-
     # Rust CLI Tools! I love rust.
     bandwhich
     bat
@@ -67,7 +62,6 @@
     lorri
     lua
     luarocks
-    neovim
     nixpkgs-fmt
     nodejs
     pre-commit
