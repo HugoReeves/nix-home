@@ -3,6 +3,7 @@ let g:vista_fzf_preview = ['right:50%']
 
 let g:vista_executive_for = {
   \ 'go': 'coc',
+  \ 'rust': 'coc',
   \ 'javascript': 'coc',
   \ 'typescript': 'coc',
   \ 'javascript.jsx': 'coc',

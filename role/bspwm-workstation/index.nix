@@ -58,7 +58,7 @@ in
       font.size = 11;
       font.user_thin_strokes = false;
       window = {
-        decorations = "full"; 
+        decorations = "full";
       };
     };
   };

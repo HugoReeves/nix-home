@@ -14,4 +14,3 @@ source $HOME/.config/nvim/general.vimrc
 source $HOME/.config/nvim/status-line.vimrc
 " Theme configuration
 source $HOME/.config/nvim/themes.vimrc
-

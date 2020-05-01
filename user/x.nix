@@ -14,8 +14,8 @@
 
   # Temporary, hopefully this will be unnecesary in future unstable versions.
   nixpkgs.config.permittedInsecurePackages = [
-     "openssl-1.0.2u"
-   ];
+    "openssl-1.0.2u"
+  ];
 
   home.packages = with pkgs; [
 

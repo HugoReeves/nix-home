@@ -1,7 +1,8 @@
 { config, lib, pkgs, ... }:
 let
   coc = import ./coc.nix;
-in {
+in
+{
   xdg.configFile."nvim/coc-settings.json".source =
     builtins.toFile "coc-settings.json" (builtins.toJSON (coc { config = config; }));
   xdg.configFile."nvim/fixers.vimrc".source = ./configs/fixers.vimrc;

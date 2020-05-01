@@ -29,9 +29,9 @@
   promptInit = builtins.readFile ./prompt.fish;
 
   shellInit = ''
-      set PATH (fd --absolute-path . $HOME/.config/scripts | tr '\n' ':' | sed 's/.$//') $PATH
-      direnv hook fish | source
-      source ~/.ssh/environment > /dev/null
+    set PATH (fd --absolute-path . $HOME/.config/scripts | tr '\n' ':' | sed 's/.$//') $PATH
+    direnv hook fish | source
+    source ~/.ssh/environment > /dev/null
   '';
 
   interactiveShellInit = ''

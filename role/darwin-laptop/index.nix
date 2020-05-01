@@ -15,7 +15,7 @@
   };
 
   # Fish Shell
-  programs.fish = lib.attrsets.recursiveUpdate(import ../../program/shell/fish/default.nix) {
+  programs.fish = lib.attrsets.recursiveUpdate (import ../../program/shell/fish/default.nix) {
     shellInit = ''
       bass source $HOME/.nix-profile/etc/profile.d/nix.sh
       direnv hook fish | source
